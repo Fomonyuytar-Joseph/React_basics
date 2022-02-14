@@ -1,16 +1,15 @@
 import LogButton from "./LogButton";
 
 
-function App() {
 
-          
+function App() {
+ 
+        
            
   return (
-      <>
-      <LogButton></LogButton>
-    
-     </>
-  );
+    <LogButton></LogButton>
+   
+    )
 }
 
 export default App;
