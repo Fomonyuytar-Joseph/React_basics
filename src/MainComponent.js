@@ -1,17 +1,29 @@
 import react from "react";
 
 class MainComponent extends react.Component{
-    formatName(firstName, lastName) {
-        return firstName + ' ' + lastName;
-        }
+    state={
+        name:''
+    }
+    handleSubmit(event){
+        event.preventDefault();
+        console.log("thanks for submiting the form");
+        console.log(this.state.name);
+    }
 render(){
-    const firstName="Fomonyuytar";
-    const lastName="Joseph";
+ 
     return(
-        <>
-        <p>Hello World</p>
-        <p>{this.formatName(firstName , lastName)}</p>
-        </>
+       <form onSubmit={this.handleSubmit}>
+           <label>
+            Name:
+            <input
+            type="text"
+            value={this.state.name}
+            onChange={(event) => this.setState({name: event.target.value})}/>
+           </label>
+           <input
+           type="submit"
+           value="submit"/>
+       </form> 
     )
 
 }        

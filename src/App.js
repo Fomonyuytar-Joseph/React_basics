@@ -1,4 +1,4 @@
-import LogButton from "./LogButton";
+import Test from "./Test";
 
 
 
@@ -7,7 +7,8 @@ function App() {
         
            
   return (
-    <LogButton></LogButton>
+      
+    <Test/>
    
     )
 }
